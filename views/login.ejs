@@ -1,11 +1,49 @@
-<html lang="fr">
-<head>
-  <meta charset="utf-8"></meta>
-  <title>Titre de la page</title>
-  <link rel="stylesheet" href="style.css"></link>
-  <script src="script.js"></script>
-</head>
-<body>
-  LOGIN
-</body>
-</html>
+<% 
+	include("header.ejs");
+%>
+
+ 
+  
+  <form action="" method="post">
+    <label>Connection : </label>
+    <div>
+        <label>Nom :</label>
+        <input type="text" id="login_name" />
+    </div>
+    <div>
+        <label>Mot de Passe :</label>
+        <input type="password" id="login_password" />
+    </div>
+    <div class="button">
+      <button type="submit">Envoyer votre message</button>
+    </div>
+</form>
+
+<form action="" method="post">
+  <label>Enregistrer : </label>
+  <div>
+    <label>Nom :</label>
+    <input type="text" id="register_name" />
+  </div>
+  <div>
+    <label>Courriel :</label>
+    <input type="email" id="register_email" />
+  </div>
+  <div>
+    <label>Mot de Passe :</label>
+    <input type="password" id="register_password" />
+  </div>
+
+  <div class="button">
+    <button type="submit">Envoyer votre message</button>
+  </div>
+</form>
+  
+  
+  
+  
+  
+  
+<% 
+	include("footer.ejs");
+%>
