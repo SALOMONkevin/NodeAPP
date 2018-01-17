@@ -11,6 +11,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var login = require('./routes/login');
 
+var register = require('./routes/register');
+var poster = require('./routes/postregister');
 
 
 var app = express();
@@ -30,7 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/login', login);
-
+app.use('/register', register);
+app.use('/postregister', poster);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -39,6 +42,10 @@ app.use(function (req, res, next) {
     next(err);
 });
 
+app.post('/login.js', function (request, response) {
+    var p1 = request.body.p1;
+    console.log("p1=" + p1);
+});
 // error handlers
 
 // development error handler
