@@ -1,50 +1,82 @@
-<% 
-	include("header.ejs");
-%>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="/lib/animate/animate.css">
+    <link rel="stylesheet" href="/lib/animsition/css/animsition.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="/lib/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="/stylesheets/formulaire.css">
+    <link rel="stylesheet" href="/stylesheets/formulaireutil.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="/lib/daterangepicker/daterangepicker.css">
+         
+    
+  </head>
+  <body>
+  	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-26">
+						Welcome
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+					</span>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
 
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
 
-<button id="connection">Connection</button>
-<button id="inscription">Inscription</button>
-  <form action="" method="post" id="formconnection">
-    <label>Connection : </label>
-    <div>
-        <label>Nom :</label>
-        <input type="text" id="login_name" />
-    </div>
-    <div>
-        <label>Mot de Passe :</label>
-        <input type="password" id="login_password" />
-    </div>
-    <div class="button">
-      <button type="submit">Envoyer votre message</button>
-    </div>
-</form>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
 
-<form action="" method="post" id="forminscription">
-  <label>Enregistrer : </label>
-  <div>
-    <label>Nom :</label>
-    <input type="text" id="register_name" />
-  </div>
-  <div>
-    <label>Courriel :</label>
-    <input type="email" id="register_email" />
-  </div>
-  <div>
-    <label>Mot de Passe :</label>
-    <input type="password" id="register_password" />
-  </div>
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Don’t have an account?
+						</span>
 
-  <div class="button">
-    <button type="submit">Envoyer votre message</button>
-  </div>
-</form>
+						<a class="txt2" href="#">
+							Sign Up
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
   
-  
-  
-  <script>
+  <script src="/lib/jquery/jquery-3.2.1.min.js"></script>    
+  <script src="/lib/animsition/js/animsition.min.js"></script>
+  <script src="/lib/bootstrap/js/popper.js"></script>    
+  <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/lib/select2/select2.min.js"></script> 
+  <script src="/lib/daterangepicker/moment.min.js"></script>
+  <script src="/lib/daterangepicker/daterangepicker.js"></script>
+  <script src="/js/formulairejs.js"></script> 
+  <!-- <script>
   $(function() {
   $('#forminscription').hide();
   $('#formconnection').hide();
@@ -57,9 +89,8 @@
       $('#formconnection').hide();
     });
     });
-  </script>
+  </script> -->
   
   
-<% 
-	include("footer.ejs");
-%>
+</body>
+</html>
