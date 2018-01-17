@@ -21,7 +21,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="/postlogin" method="post">
 					<span class="login100-form-title p-b-26">
 						Welcome
 					</span>
@@ -68,35 +68,6 @@
 
 	<div id="dropDownSelect1"></div>
  
-  <%
-  var mysql = require('mysql');
-  var mySqlClient = mysql.createConnection({
-  host     : "localhost",
-  user     : "root",
-  password : "",
-  database : "sitesoiree"
-});
-  mySqlClient.query(
-  selectQuery,
-  function select(error, results, fields) {
-    if (error) {
-      console.log(error);
-      mySqlClient.end();
-      return;
-    }
-      
-    if ( results.length > 0 )  { 
-      var firstResult = results[ 0 ];
-      console.log('id: ' + firstResult['id']);
-      console.log('label: ' + firstResult['label']);
-      console.log('valeur: ' + firstResult['valeur']);
-    } else {
-      console.log("Pas de données");
-    }
-    mySqlClient.end();
-  }
-);
-%>
 <script>
 =======
   <script src="/lib/jquery/jquery-3.2.1.min.js"></script>    

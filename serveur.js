@@ -14,6 +14,7 @@ var login = require('./routes/login');
 
 var register = require('./routes/register');
 var poster = require('./routes/postregister');
+var poster = require('./routes/postlogin');
 
 
 var app = express();
@@ -36,6 +37,7 @@ app.use('/users', users);
 app.use('/login', login);
 app.use('/register', register);
 app.use('/postregister', poster);
+app.use('/postlogin', poster);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
