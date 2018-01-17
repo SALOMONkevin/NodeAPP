@@ -43,28 +43,47 @@ body, html {
 }
 
 /*---------------------------------------------*/
-.txt2 {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
+.butEnregistrer {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
 }
 
-.txt2:focus {
-	outline: none !important;
+    .butEnregistrer:focus {
+        outline: none !important;
+    }
+
+    .butEnregistrer:hover {
+        text-decoration: none;
+        color: #ffb005;
+    }
+
+.butlogin {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
 }
 
-.txt2:hover {
-	text-decoration: none;
-    color: #ffb005;
-  
-}
+    .butlogin:focus {
+        outline: none !important;
+    }
 
+    .butlogin:hover {
+        text-decoration: none;
+        color: #ffb005;
+    }
 /*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
@@ -144,11 +163,11 @@ iframe {
   line-height: 1.5;
 }
 
-.txt2 {
-  font-family: Poppins-Regular;
-  font-size: 13px;
-  color: #333333;
-  line-height: 1.5;
+.butEnregistrer {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.5;
 }
 
 /*//////////////////////////////////////////////////////////////////

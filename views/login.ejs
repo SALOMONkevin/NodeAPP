@@ -18,10 +18,10 @@
   </head>
   <body>
   	
-	<div id = "login" class="limiter">
+	<div id = "login" class="limiter" >
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="/postlogin" method="post">
+				<form class="login100-form validate-form" action="/postregister" method="post">
 					<span class="login100-form-title p-b-26">
 						Bonjour !
 					</span>
@@ -42,14 +42,17 @@
 						<span class="focus-input100" data-placeholder="Mot de passe"></span>
 					</div>
 
-					<div class="container-login100-form-btn">
+
+						<div class="container-login100-form-btn">
+							<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Connection
+							<button type="submit" class="login100-form-btn">
+								Se connecter
 							</button>
 						</div>
 					</div>
+                    </div>
 
 					
 				</form>
@@ -60,7 +63,7 @@
 
 						
 					
-				<button class="txt2">
+				<button class="butEnregistrer">
 							S'enregistrer !
 						</button></div>
 			</div>
@@ -72,7 +75,7 @@
 	<div id = "register" class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="" method="post">
+				<form class="login100-form validate-form" action="/postregister" method="post">
 					<span class="login100-form-title p-b-26">
 						Bienvenu !
 					</span>
@@ -118,22 +121,24 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
+							<button type="submit" class="login100-form-btn">
 								S'enregistrer
 							</button>
 						</div>
 					</div>
 
-					<div class="text-center p-t-115">
+					
+				</form>
+                <div class="text-center p-t-115">
 						<span class="txt1">
 							Déjà un compte ?
 						</span>
 
-						<a class="txt2" href="#">
+						
+					
+				<button class="butLogin">
 							Se connecter !
-						</a>
-					</div>
-				</form>
+						</button></div>
 			</div>
 		</div>
 	</div>
@@ -149,21 +154,21 @@
   <script src="/lib/daterangepicker/moment.min.js"></script>
   <script src="/lib/daterangepicker/daterangepicker.js"></script>
   <script src="/js/formulairejs.js"></script> 
-  <!-- <script>
+  <script>
 
   $(function() {
-  $('#forminscription').hide();
-  $('#formconnection').hide();
-    $('#connection').click(function() {
-      $('#forminscription').hide();
-      $('#formconnection').show();
+  $('#register').hide();
+  $('#login').show();
+      $('.butlogin').click(function () {
+        $('#register').hide();
+        $('#login').show();
     });
-    $('#inscription').click(function() {
-      $('#forminscription').show();
-      $('#formconnection').hide();
+      $('.butEnregistrer').click(function () {
+          $('#login').hide();
+          $('#register').show();
     });
     });
-  </script> -->
+  </script> 
   
   
 </body>

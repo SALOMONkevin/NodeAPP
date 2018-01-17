@@ -13,8 +13,8 @@ var users = require('./routes/users');
 var login = require('./routes/login');
 
 var register = require('./routes/register');
-var poster = require('./routes/postregister');
-var poster = require('./routes/postlogin');
+var posterregister = require('./routes/postregister');
+var posterlogin = require('./routes/postlogin');
 
 
 var app = express();
@@ -36,8 +36,8 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/login', login);
 app.use('/register', register);
-app.use('/postregister', poster);
-app.use('/postlogin', poster);
+app.use('/postregister', posterregister);
+app.use('/postlogin', posterlogin);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
