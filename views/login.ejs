@@ -2,9 +2,12 @@
 	include("header.ejs");
 %>
 
- 
-  
-  <form action="" method="post">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+<button id="connection">Connection</button>
+<button id="inscription">Inscription</button>
+  <form action="" method="post" id="formconnection">
     <label>Connection : </label>
     <div>
         <label>Nom :</label>
@@ -19,7 +22,7 @@
     </div>
 </form>
 
-<form action="" method="post">
+<form action="" method="post" id="forminscription">
   <label>Enregistrer : </label>
   <div>
     <label>Nom :</label>
@@ -41,7 +44,20 @@
   
   
   
-  
+  <script>
+  $(function() {
+  $('#forminscription').hide();
+  $('#formconnection').hide();
+    $('#connection').click(function() {
+      $('#forminscription').hide();
+      $('#formconnection').show();
+    });
+    $('#inscription').click(function() {
+      $('#forminscription').show();
+      $('#formconnection').hide();
+    });
+    });
+  </script>
   
   
 <% 
