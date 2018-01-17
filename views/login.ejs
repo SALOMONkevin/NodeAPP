@@ -18,7 +18,7 @@
   </head>
   <body>
   	
-	<div id = "connection" class="limiter">
+	<div id = "login" class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" action="/postlogin" method="post">
@@ -65,8 +65,79 @@
 		</div>
 	</div>
 
-  
 	<div id="dropDownSelect1"></div>
+
+	<div id = "register" class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="" method="post">
+					<span class="login100-form-title p-b-26">
+						Bienvenu !
+					</span>
+					<span class="login100-form-title p-b-48">
+						<i class="zmdi zmdi-font"></i>
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Forme d'email valide : a@b.c">
+						<input class="input100" type="text" name="register_email">
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Entrez un nom">
+						<input class="input100" type="text" name="register_nom">
+						<span class="focus-input100" data-placeholder="Nom"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Entrez un prénom">
+						<input class="input100" type="text" name="register_prenom">
+						<span class="focus-input100" data-placeholder="Prénom"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Entrez un pseudo">
+						<input class="input100" type="text" name="register_pseudo">
+						<span class="focus-input100" data-placeholder="Pseudo"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Incomplet">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="register_password">
+						<span class="focus-input100" data-placeholder="Mot de passe"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Incomplet">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="register_password2">
+						<span class="focus-input100" data-placeholder="Vérifier mot de passe"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								S'enregistrer
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Déjà un compte ?
+						</span>
+
+						<a class="txt2" href="#">
+							Se connecter !
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="dropDownSelect1"></div>
+
 
   <script src="/lib/jquery/jquery-3.2.1.min.js"></script>    
   <script src="/lib/animsition/js/animsition.min.js"></script>
