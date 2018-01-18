@@ -34,7 +34,9 @@
 * {
 	margin: 0px; 
 	padding: 0px; 
-	box-sizing: border-box;
+  box-sizing: border-box;
+  zoom: 98%;
+  
 }
 
 body, html {
