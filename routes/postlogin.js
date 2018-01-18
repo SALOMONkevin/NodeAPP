@@ -6,8 +6,10 @@ var router = express.Router();
 router.post('/', function (req, res) {
     const db = require('./dataBase');
     console.log(req.body.register_name);
-    db.connection("select * from utilisateur");
-    res.render('test.ejs');
+    var result = db.connection("select * from utilisateur where '" + req.body.login_mail + "' = email and mdp='"+req.body.login_password+"'");
+    console.log(result[0].mdp);
+        res.render('test.ejs');
+    
 });
 
 module.exports = router;

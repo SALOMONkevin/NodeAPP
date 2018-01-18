@@ -6,6 +6,17 @@ var con = mysql.createConnection({
     password: "",
     database: "sitesoiree"
 });
+
+function connection(req) {
+        con.query(req, function (err, result) {
+            if (err) throw err;
+            console.log("Connected!");
+            console.log(result);
+            console.log(result[0]);
+    });
+}
+exports.connection = connection;
+/*
 function connection(req) {
     con.connect(function (err) {
         if (!err) {
@@ -14,10 +25,4 @@ function connection(req) {
                 if (err) throw err;
                 console.log(result);
             });
-        } else {
-            console.log("Problème de co à la db");
-        }
-
-    });
-}
-exports.connection = connection;
+        } else {*/
