@@ -53,6 +53,18 @@
             }
      
         }
+        if($(input).attr('name') == 'register_password') {
+            if($(input).val().trim().length < 6) {
+                return false;
+            }
+
+        }
+        if($(input).attr('name') == 'register_pseudo') {
+            if($(input).val().trim().length < 5) {
+                return false;
+            }
+
+        }
         else {
             if($(input).val().trim() == ''){
                 return false;

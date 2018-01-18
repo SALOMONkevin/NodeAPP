@@ -43,16 +43,23 @@
     });
 
     function validate (input) {
-        if($(input).attr('type') == 'e-mail' || $(input).attr('name') == 'email') {
+        if($(input).attr('type') == 'e-mail' || $(input).attr('name') == 'login_email') {
             if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
                 return false;
             }
+     
         }
-        if($(input).attr('name') == 'register_password2') {
-            if($(input).val().trim() != $("#password").val().trim()) {
+        if($(input).attr('name') == 'login_password') {
+            if($(input).val().trim().length < 6) {
                 return false;
             }
-     
+
+        }
+        if($(input).attr('name') == 'login_pseudo') {
+            if($(input).val().trim().length < 5) {
+                return false;
+            }
+
         }
         else {
             if($(input).val().trim() == ''){
