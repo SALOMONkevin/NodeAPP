@@ -5,7 +5,7 @@
 
     /*==================================================================
     [ Focus input ]*/
-    $('.input100').each(function(){
+    $('.input200').each(function(){
         $(this).on('blur', function(){
             if($(this).val().trim() != "") {
                 $(this).addClass('has-val');
@@ -19,9 +19,10 @@
   
     /*==================================================================
     [ Validate ]*/
-    var input = $('.validate-input .input100');
+    var input = $('.validate-inputlog .input200');
 
-    $('.validate-form').on('submit', function () {
+    $('.validate-formlog').on('submit', function () {
+        
         var check = true;
 
         for(var i=0; i<input.length; i++) {
@@ -35,7 +36,7 @@
     });
 
 
-    $('.validate-form .input100').each(function(){
+    $('.validate-formlog .input200').each(function(){
         $(this).focus(function(){
            hideValidate(this);
         });
