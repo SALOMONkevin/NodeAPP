@@ -1,76 +1,177 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sample Site</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-   
-</head>
-<body id="clrblk">
-        <div class="container">   
-        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                   
-            <div class="panel panel-info" >
-                    <div class="panel-heading">
-                        <div class="panel-title">Sign In</div>
-                        <!--<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
-                    </div>    
- 
-                    <div style="padding-top:30px" class="panel-body" >
-                                                                        <% if (message.length > 0) { %>
-                                                                                    <div class="alert alert-danger col-sm-12"><%= message %></div>
-                                                                        <% } %>
-                           
-                        <form id="loginform" class="form-horizontal" role="form" method="post" action="/login">
-                                   
-                            <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="login-username" type="text" class="form-control" name="user_name" value="" placeholder="username">                                       
-                                    </div>
-                               
-                            <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
-                                    </div>
-                                   
- 
-                               
-                            <div class="input-group">
-                                      <!--<div class="checkbox">
-                                        <label>
-                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                                        </label>
-                                      </div>-->
-                                    </div>
- 
- 
-                                <div style="margin-top:10px" class="form-group">
-                                    <!-- Button -->
- 
-                                    <div class="col-sm-12 controls">
-                                      <button id="btn-login" type="submit" class="btn btn-success">Login  </button>
-                                     
- 
-                                    </div>
-                                </div>
- 
- 
-                                <div class="form-group">
-                                    <div class="col-md-12 control">
-                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
-                                            Don't have an account!
-                                        <a href="/signup">
-                                            Sign Up Here
-                                        </a>
-                                        </div>
-                                    </div>
-                                </div>   
-                            </form>    
- 
- 
- 
-                        </div>                    
-                    </div> 
-        </div>
-       
-    </div>
-</body>
-</html>
+<html lang="fr">
+    <head>
+      <meta charset="utf-8"></meta>
+      <title>Titre de la page</title>
+      <link rel="stylesheet" href="/lib/animate/animate.css">
+      <link rel="stylesheet" href="/lib/animsition/css/animsition.min.css">
+      <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/lib/css-hamburgers/hamburgers.min.css">
+      <link rel="stylesheet" href="/lib/perfect-scrollbar/perfect-scrollbar.css">
+      <link rel="stylesheet" href="/lib/select2/select2.min.css">
+      <link rel="stylesheet" href="/stylesheets/formulaire.css">
+      <link rel="stylesheet" href="/stylesheets/formulaireutil.css">
+      <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+      <link rel="stylesheet" type="text/css" href="/lib/daterangepicker/daterangepicker.css">
+           
+      
+    </head>
+    <body>
+        
+      <div id = "login" class="limiter" >
+          <div class="container-login200">
+              <div class="wrap-login200">
+                  <form class="login200-form validate-formlog" action="/postlogin" method="post">
+                      <span class="login200-form-title p-b-26">
+                          Bonjour !
+                      </span>
+                      <span class="login200-form-title p-b-48">
+                          <i class="zmdi zmdi-font"></i>
+                      </span>
+  
+  
+                      <div class="wrap-input200 validate-inputlog" data-validate = "Forme d'email valide : a@b.c">
+                          <input class="input200" type="e-mail" name="login_mail">
+                          <span class="focus-input200" data-placeholder="Email"></span>
+                      </div>
+  
+                      <div class="wrap-input200 validate-inputlog" data-validate="6 carac. min">
+                          <span class="btn-show-pass">
+                              <i class="zmdi zmdi-eye"></i>
+                          </span>
+                          <input class="input200" type="password" name="login_password">
+                          <span class="focus-input200" data-placeholder="Mot de passe"></span>
+                      </div>
+  
+  
+                          <div class="container-login200-form-btn">
+                              <div class="container-login200-form-btn">
+                          <div class="wrap-login200-form-btn">
+                              <div class="login200-form-bgbtn"></div>
+                              <button type="submit" class="login200-form-btn">
+                                  Se connecter
+                              </button>
+                          </div>
+                      </div>
+                      </div>
+  
+                      
+                  </form>
+                  <div class="text-center p-t-115">
+                          <span class="txt1">
+                              Pas de compte ?
+                          </span>
+  
+                          
+                      
+                  <button class="butEnregistrer">
+                              S'enregistrer !
+                          </button></div>
+              </div>
+          </div>
+      </div>
+  
+  
+      <div id = "register" class="limiter">
+          <div class="container-login100">
+              <div class="wrap-login100">
+                  <form class="login100-form validate-form" action="/postregister" method="post">
+                      <span class="login100-form-title p-b-26">
+                          Bienvenu !
+                      </span>
+                      <span class="login100-form-title p-b-48">
+                          <i class="zmdi zmdi-font"></i>
+                      </span>
+  
+                      <div class="wrap-input100 validate-input" data-validate = "Forme d'email valide : a@b.c">
+                          <input class="input100" type="e-mail" name="register_mail">
+                          <span class="focus-input100" data-placeholder="Email"></span>
+                      </div>
+  
+                      <div class="wrap-input100 validate-input" data-validate = "Entrez un nom">
+                          <input class="input100" type="text" name="register_nom">
+                          <span class="focus-input100" data-placeholder="Nom"></span>
+                      </div>
+  
+                      <div class="wrap-input100 validate-input" data-validate = "Entrez un prénom">
+                          <input class="input100" type="text" name="register_prenom">
+                          <span class="focus-input100" data-placeholder="Prénom"></span>
+                      </div>
+                      <div class="wrap-input100 validate-input" data-validate = "5 carac. min">
+                          <input class="input100" type="text" name="register_pseudo">
+                          <span class="focus-input100" data-placeholder="Pseudo"></span>
+                      </div>
+  
+                      <div class="wrap-input100 validate-input" data-validate="6 carac. min">
+                          <span class="btn-show-pass">
+                              <i class="zmdi zmdi-eye"></i>
+                          </span>
+                          <input id="password" class="input100" type="password" name="register_password">
+                          <span class="focus-input100" data-placeholder="Mot de passe"></span>
+                      </div>
+  
+                      <div class="wrap-input100 validate-input" data-validate="Invalide">
+                          <span class="btn-show-pass">
+                              <i class="zmdi zmdi-eye"></i>
+                          </span>
+                          <input id ="validate-password" class="input100" type="password" name="register_password2">
+                          <span class="focus-input100" data-placeholder="Vérifier mot de passe"></span>
+                      </div>
+  
+                      <div class="container-login100-form-btn">
+                          <div class="wrap-login100-form-btn">
+                              <div class="login100-form-bgbtn"></div>
+                              <button type="submit" class="login100-form-btn">
+                                  S'enregistrer
+                              </button>
+                          </div>
+                      </div>
+  
+                      
+                  </form>
+                  <div class="text-center p-t-115">
+                          <span class="txt1">
+                              Déjà un compte ?
+                          </span>
+  
+                          
+                      
+                  <button class="butLogin">
+                              Se connecter !
+                          </button></div>
+              </div>
+          </div>
+      </div>
+  
+      <div id="dropDownSelect1"></div>
+  
+  
+    <script src="/lib/jquery/jquery-3.2.1.min.js"></script>    
+    <script src="/lib/animsition/js/animsition.min.js"></script>
+    <script src="/lib/bootstrap/js/popper.js"></script>    
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/lib/select2/select2.min.js"></script> 
+    <script src="/lib/daterangepicker/moment.min.js"></script>
+    <script src="/lib/daterangepicker/daterangepicker.js"></script>
+    <script src="/js/formulairejs.js"></script> 
+    <script src="/js/formulairejslog.js"></script> 
+    <script>
+  
+    $(function() {
+    $('#register').hide();
+    $('#login').show();
+        $('.butlogin').click(function () {
+          $('#register').hide();
+          $('#login').show();
+      });
+        $('.butEnregistrer').click(function () {
+            $('#login').hide();
+            $('#register').show();
+      });
+      });
+    </script> 
+    
+    
+  </body>
+  </html>
+  
