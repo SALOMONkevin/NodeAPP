@@ -3,14 +3,16 @@
 exports.signup = function(req, res){
    message = '';
    if(req.method == "POST"){
-      var post  = req.body;
-      var name= post.user_name;
-      var pass= post.password;
-      var fname= post.first_name;
-      var lname= post.last_name;
-      var mob= post.mob_no;
+       var post = req.body;
+       
+      var mail = post.register_mail;
+        var name = post.register_nom;
+       var prenom = post.register_prenom;
+       var pseudo = post.register_pseudo;
+       var password = post.register_password;
+       
 
-      var sql = "INSERT INTO `users`(`first_name`,`last_name`,`mob_no`,`user_name`, `password`) VALUES ('" + fname + "','" + lname + "','" + mob + "','" + name + "','" + pass + "')";
+      var sql = "INSERT INTO `utilisateur`(`pseudo`,`mdp`,`prenom`,`nom`, `email`) VALUES ('" + pseudo + "','" + password + "','" + prenom + "','" + nom + "','" + mail + "')";
 
       var query = db.query(sql, function(err, result) {
 
@@ -29,11 +31,12 @@ exports.login = function(req, res){
    var sess = req.session; 
 
    if(req.method == "POST"){
-      var post  = req.body;
-      var name= post.user_name;
-      var pass= post.password;
-     
-      var sql="SELECT id, first_name, last_name, user_name FROM `users` WHERE `user_name`='"+name+"' and password = '"+pass+"'";                           
+       var post = req.body;
+       var mail = post.login_mail;
+       var pass = post.login_password;
+       console.log("Email : " + mail);
+       console.log("pass : " + pass);
+      var sql="SELECT * FROM `utilisateur` WHERE `email`='"+mail+"' and mdp = '"+pass+"'";                           
       db.query(sql, function(err, results){      
          if(results.length){
             req.session.userId = results[0].id;
@@ -64,7 +67,7 @@ exports.dashboard = function(req, res, next){
       return;
    }
 
-   var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";
+   var sql="SELECT * FROM `utilisateur` WHERE `id`='"+userId+"'";
 
    db.query(sql, function(err, results){
       res.render('dashboard.ejs', {user:user});    
@@ -85,7 +88,7 @@ exports.profile = function(req, res){
       return;
    }
 
-   var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";          
+   var sql="SELECT * FROM `utilisateur` WHERE `id`='"+userId+"'";          
    db.query(sql, function(err, result){  
       res.render('profile.ejs',{data:result});
    });
@@ -98,7 +101,7 @@ exports.editprofile=function(req,res){
       return;
    }
 
-   var sql="SELECT * FROM `users` WHERE `id`='"+userId+"'";
+   var sql="SELECT * FROM `utilisateur` WHERE `id`='"+userId+"'";
    db.query(sql, function(err, results){
       res.render('edit_profile.ejs',{data:results});
    });
